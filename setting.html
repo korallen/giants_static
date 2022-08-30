@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Giants Dashboard</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="./assets/vendor/simplebar/dist/simplebar.min.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="./assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="bg-gray-100 dashboard-template" id="mainBox">
+
+<!-- Navbar, Navbar Vertical, Navbar Expand Md, Navbar Light -->
+<nav class="navbar navbar-vertical navbar-expand-md navbar-light">
+  <a href="#" class="back-arrow d-block d-md-none">
+    <img src="../../assets/svg/icons/hamburger1.svg" alt="img">
+    <img src="../../assets/svg/icons/close1.svg" style="width:20px;" class="menu-close" alt="img">
+  </a>
+  <a class="navbar-brand mx-auto d-block my-0 my-md-4">
+  <!-- <a class="navbar-brand mx-auto d-block my-0 my-md-4" href="#"> -->
+    <img src="../../assets/svg/brand/lotte_logo.png" alt="lotte" style="width:30%; height:30%">
+  </a>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mb-2" id="accordionExample" data-simplebar>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:getForecastCenterPage();">
+          <img src="./assets/svg/icons/chart.svg" alt="Power" class="me-2"> &nbsp;예측 센터
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="javascript:getComingSoonPage();">
+          <img src="./assets/svg/icons/magnifying_glass.png" alt="Chart" class="me-2" width="16" height="16"> &nbsp;예측 결과 분석
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="#sidebarPages" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">
+          <img src="./assets/svg/icons/baseball.png" alt="Paperclip" class="me-2" width="16" height="16"> &nbsp;경기 데이터 분석
+        </a>
+        <div class="collapse collapse-box" id="sidebarPages" data-parent="#accordionExample">
+          <ul class="nav nav-sm flex-column">
+            <li class="nav-item">
+              <a href="javascript:getComingSoonPage();" class="nav-link">Demo #1</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:getComingSoonPage();" class="nav-link">Demo #2</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:getComingSoonPage();" class="nav-link">Demo #3</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="./assets/svg/icons/setting.svg" alt="setting" class="me-2"> &nbsp;제어판
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="header p-0 p-md-3">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row align-items-center">
+          <div class="d-flex justify-content-center">
+            <div class="ps-0 ps-md-0">
+              <h4>제어판</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-2 bg-gray-200">
+  <div class="px-0 px-md-3">
+    <div class="container-fluid pt-2 pt-lg-3 pb-md-3">
+      <div class="row align-items-center">
+        <div class="col-sm-6 col-md-12 col-xl-6 col-xxl-3">
+          <div class="card mb-4 rounded-12 shadow-dark-80">
+            <div class="card-body p-3 p-xl-3 p-xxl-4">
+              <div class="mb-0">
+                <div class="col mb-4">
+                  <span class="d-flex justify-content-center h6">Option#1</span>
+                </div>
+                <hr class="my-2 bg-gray-200">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-xl-6 col-xxl-3">
+          <div class="card mb-4 rounded-12 shadow-dark-80">
+            <div class="card-body p-3 p-xl-3 p-xxl-4">
+              <div class="mb-0">
+                <div class="col mb-4">
+                  <span class="d-flex justify-content-center h6">Option#2</span>
+                </div>
+                <hr class="my-2 bg-gray-200">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-xl-6 col-xxl-3">
+          <div class="card mb-4 rounded-12 shadow-dark-80">
+            <div class="card-body p-3 p-xl-3 p-xxl-4">
+              <div class="mb-0">
+                <div class="col mb-4">
+                  <span class="d-flex justify-content-center h6">Option#3</span>
+                </div>
+                <hr class="my-2 bg-gray-200">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-xl-6 col-xxl-3">
+          <div class="card mb-4 rounded-12 shadow-dark-80">
+            <div class="card-body p-3 p-xl-3 p-xxl-4">
+              <div class="mb-0">
+                <div class="col mb-4">
+                  <span class="d-flex justify-content-center h6">Option#4</span>
+                </div>
+                <hr class="my-2 bg-gray-200">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-xl-6 col-xxl-3">
+          <div class="card mb-4 rounded-12 shadow-dark-80">
+            <div class="card-body p-3 p-xl-3 p-xxl-4">
+              <div class="mb-0">
+                <div class="col mb-4">
+                  <span class="d-flex justify-content-center h6">Option#5</span>
+                </div>
+                <hr class="my-2 bg-gray-200">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-xl-6 col-xxl-3">
+          <div class="card mb-4 rounded-12 shadow-dark-80">
+            <div class="card-body p-3 p-xl-3 p-xxl-4">
+              <div class="mb-0">
+                <div class="col mb-4">
+                  <span class="d-flex justify-content-center h6">Option#6</span>
+                </div>
+                <hr class="my-2 bg-gray-200">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h6">예측모델이 2022년 8월 30일 07:00에 마지막으로 실행됐습니다<span class="badge badge-primary rounded-pill">New</span></div>
+        <div class="h6">크롤러가 2022년 8월 30일 07:14에 마지막으로 실행됐습니다<span class="badge badge-primary rounded-pill">New</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Muse Javascript Plugins -->
+<script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/theme-custom.js"></script>
+<script src="./assets/js/giants.js"></script>
+
+</body>
+</html>
