@@ -18,6 +18,7 @@
 <script src="https://kit.fontawesome.com/a9645157dd.js" crossorigin="anonymous"></script>
 <script src="./assets/js/theme-custom.js"></script>
 <script src="./assets/js/giants.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body class="bg-gray-100 dashboard-template" id="mainBox">
 
@@ -238,39 +239,27 @@
                 <table class="table card-table table-nowrap">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Status</th>
-                      <th>Progress</th>
-                      <th>Due date</th>
-                      <th class="text-end">Team</th>
+                      <th>좌석 등급 / 블록코드</th>
+                      <th>전체 좌석 수 / 판매 좌석 수 예측</th>
+                      <th>가격 변동</th>
+                      <th>현가격</th>
+                      <th class="text-end">추천 가격</th>
                       <th></th>
                     </tr>
                   </thead>
-                  <tbody class="list"><tr>
-                      <td class="goal-project">
-                        Monthly Report
+                  <tbody class="list">
+                    <tr>
+                      <td class>
+                        외야자유석 / 71
                       </td>
-                      <td class="goal-status">
-                        <span class="avatar-status avatar-sm-status avatar-success position-relative me-1 bottom-0 end-0">&nbsp;</span> Completed
-                      </td>
-                      <td class="goal-progress">100%</td>
-                      <td class="goal-date">01/12/21</td>
                       <td>
-                        <div class="avatar-group justify-content-end">
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar2.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <span class="avatar-initials avatar-dark-light border-0">+9</span>
-                          </span>
-                        </div>
+                        607석 / 3,255석<div id="chart01"></div>
                       </td>
+                      <td>
+                        <span class="avatar-status avatar-sm-status avatar-primary position-relative me-1 bottom-0 end-0">&nbsp;</span> 할인
+                      </td>
+                      <td>8,000원</td>
+                      <td  class="text-end">7,000원</td>
                       <td class="text-end">
                         <div class="dropdown">
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -278,41 +267,23 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-end">
                             <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
+                              상세보기
                           </div>
                         </div>
                       </td>
                     </tr>
                     <tr>
-                      <td class="goal-project">
-                        UI Design
-                      </td>
-                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-warning position-relative me-1 bottom-0 end-0">&nbsp;</span> Pending</td>
-                      <td class="goal-progress">60%</td>
-                      <td class="goal-date">05/12/21</td>
                       <td>
-                        <div class="avatar-group justify-content-end">
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar2.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <span class="avatar-initials avatar-dark-light border-0">+6</span>
-                          </span>
-                        </div>
+                        중앙상단석 / 51001
                       </td>
+                      <td>
+                        48석 / 104석<div id="chart02"></div>
+                      </td>
+                      <td class>
+                        <span class="avatar-status avatar-sm-status avatar-warning position-relative me-1 bottom-0 end-0">&nbsp;</span> 유지
+                      </td>
+                      <td>10,000원</td>
+                      <td  class="text-end">10,000원</td>
                       <td class="text-end">
                         <div class="dropdown">
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -320,41 +291,23 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-end">
                             <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
+                              상세보기
                           </div>
                         </div>
                       </td>
                     </tr>
                     <tr>
-                      <td class="goal-project">
-                        React Components
-                      </td>
-                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-danger position-relative me-1 bottom-0 end-0">&nbsp;</span> Cancelled</td>
-                      <td class="goal-progress">0%</td>
-                      <td class="goal-date">06/12/21</td>
                       <td>
-                        <div class="avatar-group justify-content-end">
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar2.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <span class="avatar-initials avatar-dark-light border-0">+2</span>
-                          </span>
-                        </div>
+                        1루 내야필드석 / 111002
                       </td>
+                      <td>
+                        131석 / 145석<div id="chart03"></div>
+                      </td>
+                      <td class>
+                        <span class="avatar-status avatar-sm-status avatar-danger position-relative me-1 bottom-0 end-0">&nbsp;</span> 할증
+                      </td>
+                      <td>15,000원</td>
+                      <td  class="text-end">16,000원</td>
                       <td class="text-end">
                         <div class="dropdown">
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -362,97 +315,12 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-end">
                             <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
+                              상세보기
                           </div>
                         </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td class="goal-project">
-                        Bootstrap 5 Upgrade
-                      </td>
-                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-offline position-relative me-1 bottom-0 end-0">&nbsp;</span> Not started</td>
-                      <td class="goal-progress">0%</td>
-                      <td class="goal-date">24/12/21</td>
-                      <td>
-                        <div class="avatar-group justify-content-end">
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar1.svg" alt="Avatar">
-                            <span class="avatar-status avatar-xs-status avatar-offline">&nbsp;</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td class="text-end">
-                        <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="avatar-img" src="../../assets/svg/icons/dots1.svg" style="width:16px;" alt="Avatars">
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="goal-project">
-                        Fonts Design
-                      </td>
-                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-offline position-relative me-1 bottom-0 end-0">&nbsp;</span> Not started</td>
-                      <td class="goal-progress">
-                        0%
-                      </td>
-                      <td class="goal-date">17/12/21</td>
-                      <td>
-                        <div class="avatar-group justify-content-end">
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
-                          </span>
-                          <span class="avatar avatar-xs avatar-circle">
-                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar1.svg" alt="Avatar">
-                            <span class="avatar-status avatar-xs-status avatar-offline">&nbsp;</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td class="text-end">
-                        <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="avatar-img" src="../../assets/svg/icons/dots1.svg" style="width:16px;" alt="Avatars">
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
+                    
                   </tbody>
                 </table>
               </div>
@@ -462,6 +330,102 @@
       </div>
     </div>
   </div>
+  <script>
+    let options1 = {
+          series: [19],
+          chart: {
+          type: 'radialBar',
+          width: 30,
+          height: 30,
+          sparkline: {
+            enabled: true
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        plotOptions: {
+          radialBar: {
+            hollow: {
+              margin: 0,
+              size: '30%'
+            },
+            track: {
+              margin: 0
+            },
+            dataLabels: {
+              show: false
+            }
+          }
+        }
+        };
+
+        let options2 = {
+          series: [46],
+          chart: {
+          type: 'radialBar',
+          width: 30,
+          height: 30,
+          sparkline: {
+            enabled: true
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        plotOptions: {
+          radialBar: {
+            hollow: {
+              margin: 0,
+              size: '30%'
+            },
+            track: {
+              margin: 0
+            },
+            dataLabels: {
+              show: false
+            }
+          }
+        }
+        };
+
+        let options3 = {
+          series: [90],
+          chart: {
+          type: 'radialBar',
+          width: 30,
+          height: 30,
+          sparkline: {
+            enabled: true
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        plotOptions: {
+          radialBar: {
+            hollow: {
+              margin: 0,
+              size: '30%'
+            },
+            track: {
+              margin: 0
+            },
+            dataLabels: {
+              show: false
+            }
+          }
+        }
+        };
+
+        let chart1 = new ApexCharts(document.querySelector("#chart01"), options1);
+        let chart2 = new ApexCharts(document.querySelector("#chart02"), options2);
+        let chart3 = new ApexCharts(document.querySelector("#chart03"), options3);
+        chart1.render();
+        chart2.render();
+        chart3.render();
+
+  </script>
 </div>
 
 
