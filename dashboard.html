@@ -13,6 +13,11 @@
 <link href="./assets/vendor/simplebar/dist/simplebar.min.css" rel="stylesheet" type="text/css" media="all">
 <!-- Muse Theme CSS -->
 <link href="./assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+<!-- Javascript Plugins -->
+<script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a9645157dd.js" crossorigin="anonymous"></script>
+<script src="./assets/js/theme-custom.js"></script>
+<script src="./assets/js/giants.js"></script>
 </head>
 <body class="bg-gray-100 dashboard-template" id="mainBox">
 
@@ -30,17 +35,17 @@
     <ul class="navbar-nav mb-2" id="accordionExample" data-simplebar>
       <li class="nav-item">
         <a class="nav-link" href="javascript:getForecastCenterPage();">
-          <img src="./assets/svg/icons/chart.svg" alt="Power" class="me-2"> &nbsp;예측 센터
+          <i class="fa-sharp fa-solid fa-baseball"></i> &nbsp;&nbsp;&nbsp;&nbsp;예측 센터
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="javascript:getComingSoonPage();">
-          <img src="./assets/svg/icons/magnifying_glass.png" alt="Chart" class="me-2" width="16" height="16"> &nbsp;예측 결과 분석
+          <i class="fa-sharp fa-solid fa-baseball-bat-ball"></i> &nbsp;&nbsp;&nbsp;&nbsp;예측 결과 분석
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  href="#sidebarPages" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">
-          <img src="./assets/svg/icons/baseball.png" alt="Paperclip" class="me-2" width="16" height="16"> &nbsp;경기 데이터 분석
+          <i class="fa-solid fa-magnifying-glass-chart"></i> &nbsp;&nbsp;&nbsp;&nbsp;경기 데이터 분석&nbsp;&nbsp;
         </a>
         <div class="collapse collapse-box" id="sidebarPages" data-parent="#accordionExample">
           <ul class="nav nav-sm flex-column">
@@ -58,7 +63,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="javascript:getSettingPage();">
-          <img src="./assets/svg/icons/setting.svg" alt="Paperclip" class="me-2"> &nbsp;제어판
+          <i class="fa-solid fa-sliders"></i> &nbsp;&nbsp;&nbsp;&nbsp;제어판
         </a>
       </li>
     </ul>
@@ -74,7 +79,7 @@
           <div class="d-flex justify-content-center">
             <div class="ps-0 ps-md-0">
               <h1 class="h4 mb-0">
-                2022년 08월 23일(화)  
+                <i class="fa-regular fa-calendar-days"></i> &nbsp;2022년 08월 23일(화)  
               </h1>
             </div>
           </div>
@@ -91,7 +96,7 @@
             <div class="card-body p-3 p-xl-3 p-xxl-4">
               <div class="mb-0">
                 <div class="col mb-4">
-                  <span class="d-flex justify-content-center h6">8월 23일(화) 18:30 | 맑음</span>
+                  <span class="d-flex justify-content-center h6">8월 23일(화) 18:30 |&nbsp;<i class="fa-solid fa-sun"></i></span>
                 </div>
                 <div class="d-flex justify-content-center mb-4">
                   <span class="h6 mb-0">
@@ -124,7 +129,7 @@
             <div class="card-body p-3 p-xl-3 p-xxl-4">
               <div class="mb-0">
                 <div class="col mb-4">
-                  <span class="d-flex justify-content-center h6">8월 24일(수) 18:30 | 흐림</span>
+                  <span class="d-flex justify-content-center h6">8월 24일(수) 18:30 |&nbsp;<i class="fa-solid fa-cloud"></i></span>
                 </div>
                 <div class="d-flex justify-content-center mb-4">
                   <span class="h6 mb-0">
@@ -157,7 +162,7 @@
             <div class="card-body p-3 p-xl-3 p-xxl-4">
               <div class="mb-0">
                 <div class="col mb-4">
-                  <span class="d-flex justify-content-center h6">8월 26일(목) 18:30 | 비</span>
+                  <span class="d-flex justify-content-center h6">8월 26일(목) 18:30 |&nbsp;<i class="fa-sharp fa-solid fa-umbrella"></i></i></span>
                 </div>
                 <div class="d-flex justify-content-center mb-4">
                   <span class="h6 mb-0">
@@ -190,7 +195,7 @@
             <div class="card-body p-3 p-xl-3 p-xxl-4">
               <div class="mb-0">
                 <div class="col mb-4">
-                  <span class="d-flex justify-content-center h6">8월 27일(금) 18:30 | 맑음</span>
+                  <span class="d-flex justify-content-center h6">8월 27일(금) 18:30 |&nbsp;<i class="fa-solid fa-sun"></i></span>
                 </div>
                 <div class="d-flex justify-content-center mb-4">
                   <span class="h6 mb-0">
@@ -218,15 +223,248 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="card rounded-12 shadow-dark-80">
+              <div class="d-flex align-items-center px-4 py-3">
+                <h6 class="card-header-title mb-0">Goals</h6>
+                <div class="ms-auto">
+                  <select class="form-select form-select-sm">
+                    <option>Today</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-responsive mb-0">
+                <table class="table card-table table-nowrap">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Progress</th>
+                      <th>Due date</th>
+                      <th class="text-end">Team</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody class="list"><tr>
+                      <td class="goal-project">
+                        Monthly Report
+                      </td>
+                      <td class="goal-status">
+                        <span class="avatar-status avatar-sm-status avatar-success position-relative me-1 bottom-0 end-0">&nbsp;</span> Completed
+                      </td>
+                      <td class="goal-progress">100%</td>
+                      <td class="goal-date">01/12/21</td>
+                      <td>
+                        <div class="avatar-group justify-content-end">
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar2.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <span class="avatar-initials avatar-dark-light border-0">+9</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="avatar-img" src="../../assets/svg/icons/dots1.svg" style="width:16px;" alt="Avatars">
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        UI Design
+                      </td>
+                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-warning position-relative me-1 bottom-0 end-0">&nbsp;</span> Pending</td>
+                      <td class="goal-progress">60%</td>
+                      <td class="goal-date">05/12/21</td>
+                      <td>
+                        <div class="avatar-group justify-content-end">
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar2.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <span class="avatar-initials avatar-dark-light border-0">+6</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="avatar-img" src="../../assets/svg/icons/dots1.svg" style="width:16px;" alt="Avatars">
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        React Components
+                      </td>
+                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-danger position-relative me-1 bottom-0 end-0">&nbsp;</span> Cancelled</td>
+                      <td class="goal-progress">0%</td>
+                      <td class="goal-date">06/12/21</td>
+                      <td>
+                        <div class="avatar-group justify-content-end">
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar2.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <span class="avatar-initials avatar-dark-light border-0">+2</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="avatar-img" src="../../assets/svg/icons/dots1.svg" style="width:16px;" alt="Avatars">
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        Bootstrap 5 Upgrade
+                      </td>
+                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-offline position-relative me-1 bottom-0 end-0">&nbsp;</span> Not started</td>
+                      <td class="goal-progress">0%</td>
+                      <td class="goal-date">24/12/21</td>
+                      <td>
+                        <div class="avatar-group justify-content-end">
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar3.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar1.svg" alt="Avatar">
+                            <span class="avatar-status avatar-xs-status avatar-offline">&nbsp;</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="avatar-img" src="../../assets/svg/icons/dots1.svg" style="width:16px;" alt="Avatars">
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        Fonts Design
+                      </td>
+                      <td class="goal-status"><span class="avatar-status avatar-sm-status avatar-offline position-relative me-1 bottom-0 end-0">&nbsp;</span> Not started</td>
+                      <td class="goal-progress">
+                        0%
+                      </td>
+                      <td class="goal-date">17/12/21</td>
+                      <td>
+                        <div class="avatar-group justify-content-end">
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar4.png" alt="Avatar">
+                          </span>
+                          <span class="avatar avatar-xs avatar-circle">
+                            <img class="avatar-img border-0" src="../../assets/img/dashboard/avatar1.svg" alt="Avatar">
+                            <span class="avatar-status avatar-xs-status avatar-offline">&nbsp;</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="avatar-img" src="../../assets/svg/icons/dots1.svg" style="width:16px;" alt="Avatars">
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Muse Javascript Plugins -->
-<script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./assets/js/theme-custom.js"></script>
-<script src="./assets/js/giants.js"></script>
+
 
 </body>
 </html>
