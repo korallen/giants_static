@@ -3,72 +3,79 @@ console.log("giants.js is started!")
 function getForecastCenterPage(){
     let mainBox = document.querySelector('#mainBox > div');
     let body = document.querySelector('body');
-    mainBox.remove();
-
-    fetch('/dashboard.html').then(function (response) {
+    const newContent = fetch('/dashboard.html').then(function (response) {
         // The API call was successful!
         return response.text();
     }).then(function (html) {
-    
         // Convert the HTML string into a document object
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
-        let newContent = doc.querySelector('body > div');
-        body.append(newContent);
-
-            
+        const newContent = doc.querySelector('body > div');
+        return newContent              
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
     });
+
+    const changeScreen = () => {
+        newContent.then((appData) => {
+        mainBox.remove();
+        body.append(appData);
+        });
+      }
+      changeScreen();
 }
 
 function getComingSoonPage() {
     let mainBox = document.querySelector('#mainBox > div');
     let body = document.querySelector('body');
-    mainBox.remove();
-
-    fetch('/comingsoon.html').then(function (response) {
+    const newContent = fetch('/comingsoon.html').then(function (response) {
         // The API call was successful!
         return response.text();
-    }).then(function (html) {
-    
+    }).then(function (html) {    
         // Convert the HTML string into a document object
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
-        let newContent = doc.querySelector('body > div');
-        body.append(newContent);
-
-    
+        const newContent = doc.querySelector('body > div');
+        return newContent    
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
     });
+    
+    const changeScreen = () => {
+        newContent.then((appData) => {
+        mainBox.remove();
+        body.append(appData);
+        });
+      }
+      changeScreen();
   }
 
-  function getSettingPage(){
-    console.log("개발시작!");
 
+  function getSettingPage(){
     let mainBox = document.querySelector('#mainBox > div');
     let body = document.querySelector('body');
-    mainBox.remove();
 
-    fetch('/setting.html').then(function (response) {
+    const newContent = fetch('/setting.html').then(function (response) {
         // The API call was successful!
         return response.text();
     }).then(function (html) {
-    
         // Convert the HTML string into a document object
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
-        let newContent = doc.querySelector('body > div');
-        body.append(newContent);
-
-            
+        const newContent = doc.querySelector('body > div');
+        return newContent             
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
     });
-
+    const changeScreen = () => {
+        newContent.then((appData) => {
+        mainBox.remove();
+        body.append(appData);
+        });
+      }
+      changeScreen();
   }
 
