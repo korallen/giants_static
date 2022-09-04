@@ -1,4 +1,7 @@
-console.log("giants.js is started!")
+function testMessage(){
+    console.log("I'am Loaded!");
+    console.log(document.querySelector("#chart01"));
+}
 
 function getForecastCenterPage(){
     let mainBox = document.querySelector('#mainBox > div');
@@ -22,8 +25,14 @@ function getForecastCenterPage(){
         mainBox.remove();
         body.append(appData);
         });
+        
       }
-      changeScreen();
+    
+    changeScreen();
+    testMessage();
+    
+
+    
 }
 
 function getComingSoonPage() {
@@ -78,4 +87,3 @@ function getComingSoonPage() {
       }
       changeScreen();
   }
-

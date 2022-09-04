@@ -17,11 +17,12 @@
 <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/a9645157dd.js" crossorigin="anonymous"></script>
 <script src="./assets/js/theme-custom.js"></script>
-<script src="./assets/js/giants.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="./assets/js/giants.js"></script>
 </head>
-<body class="bg-gray-100 dashboard-template" id="mainBox">
 
+
+<body class="bg-gray-100 dashboard-template" id="mainBox">
 <!-- Navbar, Navbar Vertical, Navbar Expand Md, Navbar Light -->
 <nav class="navbar navbar-vertical navbar-expand-md navbar-light">
   <a href="#" class="back-arrow d-block d-md-none">
@@ -36,7 +37,7 @@
     <ul class="navbar-nav mb-2" id="accordionExample" data-simplebar>
       <li class="nav-item">
         <a class="nav-link" href="javascript:getForecastCenterPage();">
-          <i class="fa-sharp fa-solid fa-baseball"></i> &nbsp;&nbsp;&nbsp;&nbsp;예측 센터
+          <i class="fa-sharp fa-solid fa-baseball"></i> &nbsp;&nbsp;&nbsp;&nbsp;티켓 가격 추천
         </a>
       </li>
       <li class="nav-item">
@@ -45,22 +46,15 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="#sidebarPages" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">
+        <a class="nav-link"  href="javascript:getComingSoonPage();">
+        <!-- <a class="nav-link"  href="javascript:getComingSoonPage();" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages"></a> -->
           <i class="fa-solid fa-magnifying-glass-chart"></i> &nbsp;&nbsp;&nbsp;&nbsp;경기 데이터 분석&nbsp;&nbsp;
         </a>
-        <div class="collapse collapse-box" id="sidebarPages" data-parent="#accordionExample">
-          <ul class="nav nav-sm flex-column">
-            <li class="nav-item">
-              <a href="javascript:getComingSoonPage();" class="nav-link">Demo #1</a>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:getComingSoonPage();" class="nav-link">Demo #2</a>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:getComingSoonPage();" class="nav-link">Demo #3</a>
-            </li>
-          </ul>
-        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:getComingSoonPage();">
+          <i class="fa-regular fa-file-lines"></i>&nbsp;&nbsp;&nbsp;&nbsp;매뉴얼
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="javascript:getSettingPage();">
@@ -226,21 +220,58 @@
         </div>
         <div class="row">
           <div class="col-12 mb-4">
-            <div class="card rounded-12 shadow-dark-80">
+            <div class="card rounded-12 shadow-dark-80">          
               <div class="d-flex align-items-center px-4 py-3">
-                <h6 class="card-header-title mb-0">Goals</h6>
+                <h6 class="card-header-title mb-0"><i class="fa-solid fa-gear"></i>&nbsp;설정&nbsp;</h6>
                 <div class="ms-auto">
+                  <label for="customRange3" class="form-label">흥행 기준: 1.96σ</label>
+                  <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+                </div>
+                <div class="ms-auto">
+                  <label for="customRange3" class="form-label">할증 금액: +500원</label>
+                  <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+                </div>
+                <div class="ms-auto">
+                  <label for="customRange3" class="form-label">할인 금액: -1,000원</label>
+                  <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+                </div>
+                <div class="ms-auto">
+                  <label for="customRange3" class="form-label">좌석 선택</label>
                   <select class="form-select form-select-sm">
-                    <option>Today</option>
+                    <option>전체 좌석</option>
+                    <option>외야자유석</option>
+                    <option>중앙상단석</option>
+                    <option>1루 내야필드석</option>
                   </select>
                 </div>
+                <div class="ms-auto">
+                  <label for="customRange3" class="form-label">분석 시각</label>
+                  <select class="form-select form-select-sm">
+                    <option>8월 20일 07:00AM</option>
+                    <option>8월 19일 07:00AM</option>
+                    <option>8월 18일 07:00AM</option>
+                    <option>8월 17일 07:00AM</option>
+                    <option>8월 16일 07:00AM</option>
+                    <option>8월 15일 07:00AM</option>
+                    <option>8월 14일 07:00AM</option>
+                    <option>8월 13일 07:00AM</option>
+                  </select>
+                </div>                
+              </div>
+              <hr class="my-2 bg-gray-200">
+              <div class="d-flex align-items-center px-4 py-3">
+                <h6 class="card-header-title mb-0"><i class="fa-solid fa-ticket"></i>&nbsp;추천 결과&nbsp;</h6>   
+                <div class="ms-auto">                  
+                  <div class="ms-auto h4"><span class="badge badge-sm badge-secondary rounded-pill"><i class="fa-solid fa-file-arrow-down"></i>&nbsp;&nbsp;다운로드</span></div>
+                </div>             
               </div>
               <div class="table-responsive mb-0">
                 <table class="table card-table table-nowrap">
                   <thead>
-                    <tr>
-                      <th>좌석 등급 / 블록코드</th>
-                      <th>전체 좌석 수 / 판매 좌석 수 예측</th>
+                    <tr  class="text-center">
+                      <th>좌석 등급</th>
+                      <th>블록코드</th>                      
+                      <th colspan="2" class="text-center">판매 예측 좌석수 / 전체 좌석수</th>
                       <th>가격 변동</th>
                       <th>현가격</th>
                       <th class="text-end">추천 가격</th>
@@ -248,16 +279,12 @@
                     </tr>
                   </thead>
                   <tbody class="list">
-                    <tr>
-                      <td class>
-                        외야자유석 / 71
-                      </td>
-                      <td>
-                        607석 / 3,255석<div id="chart01"></div>
-                      </td>
-                      <td>
-                        <span class="avatar-status avatar-sm-status avatar-primary position-relative me-1 bottom-0 end-0">&nbsp;</span> 할인
-                      </td>
+                    <tr class="text-center">
+                      <td>외야자유석</td>
+                      <td>71</td>
+                      <td class="px-0 text-end">607석 / 3,255석</td>
+                      <td><div id="chart01"></div></td>
+                      <td><span class="avatar-status avatar-sm-status avatar-primary position-relative me-1 bottom-0 end-0">&nbsp;</span> 할인</td>
                       <td>8,000원</td>
                       <td  class="text-end">7,000원</td>
                       <td class="text-end">
@@ -272,16 +299,12 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td>
-                        중앙상단석 / 51001
-                      </td>
-                      <td>
-                        48석 / 104석<div id="chart02"></div>
-                      </td>
-                      <td class>
-                        <span class="avatar-status avatar-sm-status avatar-warning position-relative me-1 bottom-0 end-0">&nbsp;</span> 유지
-                      </td>
+                    <tr  class="text-center">
+                      <td>중앙상단석</td>
+                      <td>51001</td>
+                      <td class="px-0 text-end">48석 / 104석</td>
+                      <td><div id="chart02"></div></td>
+                      <td class><span class="avatar-status avatar-sm-status avatar-warning position-relative me-1 bottom-0 end-0">&nbsp;</span> 유지</td>
                       <td>10,000원</td>
                       <td  class="text-end">10,000원</td>
                       <td class="text-end">
@@ -296,16 +319,12 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td>
-                        1루 내야필드석 / 111002
-                      </td>
-                      <td>
-                        131석 / 145석<div id="chart03"></div>
-                      </td>
-                      <td class>
-                        <span class="avatar-status avatar-sm-status avatar-danger position-relative me-1 bottom-0 end-0">&nbsp;</span> 할증
-                      </td>
+                    <tr  class="text-center">
+                      <td>1루 내야필드석</td>
+                      <td>111002</td>
+                      <td class="px-0 text-end">131석 / 145석</td>
+                      <td><div id="chart03"></div></td>
+                      <td><span class="avatar-status avatar-sm-status avatar-danger position-relative me-1 bottom-0 end-0">&nbsp;</span> 할증</td>
                       <td>15,000원</td>
                       <td  class="text-end">16,000원</td>
                       <td class="text-end">
@@ -330,104 +349,104 @@
       </div>
     </div>
   </div>
-  <script>
-    let options1 = {
-          series: [19],
-          chart: {
-          type: 'radialBar',
-          width: 30,
-          height: 30,
-          sparkline: {
-            enabled: true
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        plotOptions: {
-          radialBar: {
-            hollow: {
-              margin: 0,
-              size: '30%'
-            },
-            track: {
-              margin: 0
-            },
-            dataLabels: {
-              show: false
-            }
-          }
-        }
-        };
 
-        let options2 = {
-          series: [46],
-          chart: {
-          type: 'radialBar',
-          width: 30,
-          height: 30,
-          sparkline: {
-            enabled: true
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        plotOptions: {
-          radialBar: {
-            hollow: {
-              margin: 0,
-              size: '30%'
-            },
-            track: {
-              margin: 0
-            },
-            dataLabels: {
-              show: false
-            }
-          }
-        }
-        };
-
-        let options3 = {
-          series: [90],
-          chart: {
-          type: 'radialBar',
-          width: 30,
-          height: 30,
-          sparkline: {
-            enabled: true
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        plotOptions: {
-          radialBar: {
-            hollow: {
-              margin: 0,
-              size: '30%'
-            },
-            track: {
-              margin: 0
-            },
-            dataLabels: {
-              show: false
-            }
-          }
-        }
-        };
-
-        let chart1 = new ApexCharts(document.querySelector("#chart01"), options1);
-        let chart2 = new ApexCharts(document.querySelector("#chart02"), options2);
-        let chart3 = new ApexCharts(document.querySelector("#chart03"), options3);
-        chart1.render();
-        chart2.render();
-        chart3.render();
-
-  </script>
 </div>
+<script>
+let options1 = {
+    series: [19],
+    chart: {
+    type: 'radialBar',
+    width: 30,
+    height: 30,
+    sparkline: {
+      enabled: true
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 0,
+        size: '30%'
+      },
+      track: {
+        margin: 0
+      },
+      dataLabels: {
+        show: false
+      }
+    }
+  }
+  };
 
+  let options2 = {
+    series: [46],
+    chart: {
+    type: 'radialBar',
+    width: 30,
+    height: 30,
+    sparkline: {
+      enabled: true
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 0,
+        size: '30%'
+      },
+      track: {
+        margin: 0
+      },
+      dataLabels: {
+        show: false
+      }
+    }
+  }
+  };
+
+  let options3 = {
+    series: [90],
+    chart: {
+    type: 'radialBar',
+    width: 30,
+    height: 30,
+    sparkline: {
+      enabled: true
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 0,
+        size: '30%'
+      },
+      track: {
+        margin: 0
+      },
+      dataLabels: {
+        show: false
+      }
+    }
+  }
+  };
+
+  let chart1 = new ApexCharts(document.querySelector("#chart01"), options1);
+  let chart2 = new ApexCharts(document.querySelector("#chart02"), options2);
+  let chart3 = new ApexCharts(document.querySelector("#chart03"), options3);
+  chart1.render();
+  chart2.render();
+  chart3.render();
+
+</script>
 
 
 </body>
